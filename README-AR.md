@@ -3,6 +3,8 @@
 
 [![PyPI version](https://badge.fury.io/py/cosave.svg)](https://badge.fury.io/py/cosave) [![Python Versions](https://img.shields.io/pypi/pyversions/cosave.svg)](https://pypi.org/project/cosave/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![GitHub stars](https://img.shields.io/github/stars/salah-alhajj/cosave?style=social)](https://github.com/salah-alhajj/cosave) [![GitHub forks](https://img.shields.io/github/forks/salah-alhajj/cosave?style=social)](https://github.com/salah-alhajj/cosave) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) [![Awesome README](https://awesome.re/badge.svg)](https://awesome.re)
 
+[English](README.md)
+
 **وقف! 👏  تضيّع 👏 وقتك 👏  في 👏 كتابة 👏 نفس 👏 الأوامر 👏 كل 👏 شوي!**
 
 <div dir="rtl" align='right'>
