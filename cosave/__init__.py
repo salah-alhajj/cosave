@@ -1,0 +1,1 @@
+from cosave.cli import main

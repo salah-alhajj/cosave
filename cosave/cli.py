@@ -3,10 +3,9 @@ import sys
 import os
 from cosave.commands import add_command, list_commands, delete_command, update_command,backup_commands,restore_commands
 from cosave.utils import parse_variables, execute_command, load_commands, save_commands
-
-DEFAULT_COMMANDS_FILE = "commands.yaml"
-
+DEFAULT_COMMANDS_FILE = os.path.join(os.path.dirname(os.path.realpath(__file__)), "commands.yaml")
 def main():
+    
     parser = argparse.ArgumentParser(
         description="Command Saver and Executor (cosave)",
         epilog="Examples:\n"
@@ -21,7 +20,6 @@ def main():
                "  Restore commands (merge):   cosave --restore-path backup.yaml",
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
-
     parser.add_argument('--commands-file-path', default=DEFAULT_COMMANDS_FILE, help=f"Path to the commands YAML file (default: '{DEFAULT_COMMANDS_FILE}')")
 
 
@@ -32,7 +30,7 @@ def main():
     group.add_argument('--delete', metavar='NAME', help='Delete a saved command')
     group.add_argument('--backup-path', metavar='PATH', help='Backup commands to the specified file path')
     group.add_argument('--restore-path', metavar='PATH', help='Restore commands from the specified backup file path')
-    group.add_argument('--version', action='version', version='cosave 0.9.1') 
+    group.add_argument('--version', action='version', version='cosave 0.9.6') 
 
     parser.add_argument('--override', action='store_true', help='Override current commands when restoring from backup (default: merge)')
     parser.add_argument('execute_command_name', nargs='?', help='Command to execute') 
@@ -77,9 +75,6 @@ def main():
             print("Error parsing command line for --add")
             return 1
 
-        print(f"DEBUG: commands_file_path: {commands_file_path}")
-        print(f"DEBUG: command_name: {command_name}")
-        print(f"DEBUG: command_string: {command_string}")
         if not add_command(commands_file_path, command_name, command_string): # Check if add_command returns False (error)
             return 1 # Exit with error code
 

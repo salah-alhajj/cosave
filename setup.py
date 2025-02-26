@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.9.1'
+VERSION = '0.9.6'
 DESCRIPTION = 'A command-line tool to save and execute commands with variables.'
 LONG_DESCRIPTION = """
 cosave is a command-line tool that allows you to save and execute frequently used commands with placeholders for variables. 
@@ -33,8 +33,10 @@ setup(
     description=DESCRIPTION,
     long_description=LONG_DESCRIPTION,
     packages=find_packages(),
+
     install_requires=['PyYAML'],
     keywords=['command-line', 'automation', 'productivity', 'shell', 'scripting'],
+
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
@@ -51,6 +53,8 @@ setup(
         "Programming Language :: Python :: 3.11",
         "Operating System :: OS Independent",
     ],
+    # add github repo link
+    url="https://github.com/salah-alhajj/cosave",
     python_requires='>=3.6',
     entry_points={
         'console_scripts': [

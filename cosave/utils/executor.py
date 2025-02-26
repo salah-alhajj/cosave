@@ -40,7 +40,7 @@ def execute_command(commands_file:str, name, variables, show_output=True):
             stdout_line = process.stdout.readline()
             if stdout_line == '' and process.poll() is not None:
                 break
-            if stdout_line and show_output: # Conditionally print output
+            if show_output: # Conditionally print output
                 print(stdout_line.strip())
 
         return_code = process.poll()
